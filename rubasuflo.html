@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowchart Agensi Digital</title>
+    <script type="module">
+        // Mengimpor Mermaid
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <style>
+        .mermaid {
+            text-align: center;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="mermaid">
+    graph TD;
+        A[Mulai] --&gt; B[Pelanggan menghubungi agensi];
+        B --&gt; C[Tim Customer Service mencatat kebutuhan];
+        C --&gt; D[Diskusi untuk detail proyek];
+        D --&gt; E[Tim membuat proposal];
+        E --&gt; F{Apakah pelanggan setuju?};
+        F --&gt;|Ya| G[Perencanaan Proyek];
+        F --&gt;|Tidak| A;
+
+        G --&gt; H[Input: Persetujuan, brief proyek, DP];
+        H --&gt; I[Definisikan timeline dan milestones];
+        I --&gt; J[Pembagian tugas ke tim terkait];
+        J --&gt; K[Pembuatan roadmap];
+
+        K --&gt; L[Pengembangan/Pembuatan Konten];
+        L --&gt; M{Jenis layanan};
+        M --&gt;|Branding| N[Desainer membuat konsep];
+        M --&gt;|Web Development| O[Wireframe dan desain awal];
+        M --&gt;|Video Branding| P[Produksi video];
+        
+        N --&gt; Q[Revisi];
+        Q --&gt; R[Finalisasi desain];
+        O --&gt; S[Pembangunan website];
+        P --&gt; T[Editing video];
+        
+        R --&gt; U[Revisi dan Feedback Pelanggan];
+        S --&gt; U;
+        T --&gt; U;
+
+        U --&gt; V[Pelanggan mengevaluasi hasil];
+        V --&gt; W[Tim implementasikan revisi];
+        W --&gt; X[Versi final];
+
+        X --&gt; Y[Finalisasi dan Pengiriman];
+        Y --&gt; Z[Dokumentasi proyek dan pengiriman];
+        Z --&gt; AA[Penutupan Proyek];
+
+        AA --&gt; AB[Layanan Purna Jual];
+        AB --&gt; AC[Akhir];
+</div>
+
+
+</body></html>
